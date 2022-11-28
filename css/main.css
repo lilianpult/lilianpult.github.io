@@ -146,7 +146,7 @@ textarea {
 @media (min-width: 60em) {
   :root {
     --box-x-padding: 3rem;
-    --box-y-padding: 5rem;
+    --box-y-padding: 6rem;
   }
 }
 
