@@ -133,7 +133,6 @@ textarea {
 /* ==========================================================================
    Custom styles
    ========================================================================== */
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,700');
 
 :root {
   --box-x-padding: 2rem;
@@ -147,7 +146,7 @@ textarea {
 @media (min-width: 60em) {
   :root {
     --box-x-padding: 3rem;
-    --box-y-padding: 6rem;
+    --box-y-padding: 5rem;
   }
 }
 
@@ -156,7 +155,10 @@ textarea {
     display: grid;
     grid-template-rows: repeat(3, auto);
     grid-template-columns: 4fr 4fr 5fr;
-    grid-template-areas: '. . title' 'img img aside' 'img img .';
+    grid-template-areas:
+      '. . title'
+      'img img aside'
+      'img img .';
     max-width: 1000px;
     margin-right: auto;
     margin-left: auto;
@@ -230,16 +232,17 @@ h1::after {
   line-height: 1.5;
 }
 .aside a {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: inherit;
+  white-space: nowrap;
+}
+.aside a.btn {
   text-decoration: none;
   border: 1px solid #b3b3b3;
   border-radius: 1em;
   padding: 1em 2em;
-  text-transform: uppercase;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  color: inherit;
-  display: inline-block;
+
   background-color: #fff;
 }
 .hero-container {
@@ -249,4 +252,47 @@ h1::after {
   max-width: 100%;
   vertical-align: middle;
   box-shadow: 0 0.2em 1.2em rgba(61, 48, 41, 0.1);
+}
+
+/* ==========================================================================
+   Fonts
+   ========================================================================== */
+/* montserrat-regular - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/montserrat-v25-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/montserrat-v25-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/montserrat-v25-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/montserrat-v25-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/montserrat-v25-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/montserrat-v25-latin-regular.svg#Montserrat') format('svg'); /* Legacy iOS */
+}
+/* montserrat-700 - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/montserrat-v25-latin-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/montserrat-v25-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/montserrat-v25-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/montserrat-v25-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/montserrat-v25-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/montserrat-v25-latin-700.svg#Montserrat') format('svg'); /* Legacy iOS */
+}
+/* montserrat-italic - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/montserrat-v25-latin-italic.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/montserrat-v25-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/montserrat-v25-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/montserrat-v25-latin-italic.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/montserrat-v25-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/montserrat-v25-latin-italic.svg#Montserrat') format('svg'); /* Legacy iOS */
 }
